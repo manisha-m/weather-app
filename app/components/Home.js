@@ -9,7 +9,7 @@ function Home(props) {
         return (
             <div className='jumbotron' style={background}>
             <div className='jumbotron col-sm-6 col-sm-offset-3 text-center' style={alignJumbo}>
-            <h1>Enter a City and Country</h1>
+            <span style={{color: 'white'}}><h1>Enter a City and Country</h1></span>
             <form onSubmit={props.handleSubmitPlace}>
                         <div className="form-group col-sm-5 col-sm-offset-3">
                         <input 
@@ -21,7 +21,7 @@ function Home(props) {
                         </div>
                         <div className="form-group col-sm-3 col-xs-4 col-sm-offset-4">
                         <button
-                            className="btn btn-block btn-success btn-responsive"
+                            className="btn btn-block btn-danger btn-responsive"
                             type="submit">
                             Get Weather 
                         </button>
