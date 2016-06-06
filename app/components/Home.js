@@ -3,10 +3,16 @@ var PropTypes = React.PropTypes;
 var alignJumbo = require('../styles').alignHomeJumbo;
 var background = require('../styles').background;
 var transparentBg = require('../styles').transparentBg;
+var MyNavBar = require('./MyNavBar');
 
 function Home(props) {
-        console.log('Rendering Home page');
         return (
+            <div>
+                <MyNavBar
+                    place={props.place}
+                    handleSubmitPlace={props.handleSubmitPlace}
+                    handleUpdatePlace={props.handleUpdatePlace}/>
+            
             <div className='jumbotron' style={background}>
             <div className='jumbotron col-sm-6 col-sm-offset-3 text-center' style={alignJumbo}>
             <span style={{color: 'white'}}><h1>Enter a City and Country</h1></span>
@@ -27,6 +33,7 @@ function Home(props) {
                         </button>
                         </div>
                 </form>
+            </div>
             </div>
             </div>
         );
