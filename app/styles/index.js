@@ -10,6 +10,12 @@ var styles = {
     alignHomeJumbo: {
         marginTop: '200px',
         background: 'transparent'
+    },
+    alignForecastPgJumbo: {
+        marginTop: '50px',
+        background: 'transparent',
+        height: '800px',
+        width: '100%'
     }
 };
 
