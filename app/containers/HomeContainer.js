@@ -20,7 +20,8 @@ var HomeContainer = React.createClass({
    onSubmitPlace: function (e) {
        //go to /city route
        console.log("Need to wire up Get Weather");
-       this.context.router.push('/cityWeather/' + this.state.place);
+       //this.context.router.push('/cityWeather/' + this.state.place);
+       this.context.router.push('/forecast/' + this.state.place);
        
    },
    render: function () {
