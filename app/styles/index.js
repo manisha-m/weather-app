@@ -12,7 +12,7 @@ var styles = {
         background: 'transparent'
     },
     alignForecastPgJumbo: {
-        marginTop: '50px',
+        marginTop: '75px',
         background: 'transparent',
         height: '800px',
         width: '100%'

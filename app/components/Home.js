@@ -26,10 +26,15 @@ function Home(props) {
                             type="text" />
                         </div>
                         <div className="form-group col-sm-3 col-xs-4 col-sm-offset-4">
-                        <button
+                        <button id="current"
                             className="btn btn-block btn-danger btn-responsive"
-                            type="submit">
-                            Get Weather 
+                            type="submit" onClick={props.handleClick}>
+                            Current Weather
+                        </button>
+                        <button id="forecast"
+                            className="btn btn-block btn-danger btn-responsive"
+                            type="submit" onClick={props.handleClick}>
+                            Forecast 
                         </button>
                         </div>
                 </form>

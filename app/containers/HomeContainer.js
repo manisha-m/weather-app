@@ -8,7 +8,8 @@ var HomeContainer = React.createClass({
     },
    getInitialState: function () {
        return ( {
-           place: ''
+           place: '',
+           action: ''
        })
    },
    onUpdatePlace: function (e) {
@@ -21,13 +22,22 @@ var HomeContainer = React.createClass({
        //go to /city route
        console.log("Need to wire up Get Weather");
        //this.context.router.push('/cityWeather/' + this.state.place);
-       this.context.router.push('/forecast/' + this.state.place);
+       (this.state.action === 'current') ?
+           this.context.router.push('/cityWeather/' + this.state.place) :
+           this.context.router.push('/forecast/' + this.state.place);
        
+   },
+   onButtonClick: function (e) {
+       console.log('Handling on Button Click');
+       console.log('Button id is ' + e.target.id);
+       this.setState({
+            action: e.target.id     
+       })
    },
    render: function () {
        return (
             <Home 
-                place={this.state.place} handleUpdatePlace={this.onUpdatePlace} handleSubmitPlace={this.onSubmitPlace} />
+                place={this.state.place} handleUpdatePlace={this.onUpdatePlace} handleSubmitPlace={this.onSubmitPlace} handleClick={this.onButtonClick} />
        );
    } 
 });
