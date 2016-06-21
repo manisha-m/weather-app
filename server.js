@@ -5,10 +5,10 @@ var proxy = httpProxy.createProxyServer();
 
 var app = express();
 
-var isProduction = process.env.NODE_ENV === 'production';
-var port = 3000;
+var isProduction =  process.env.NODE_ENV === 'production';
+var port = isProduction ? process.env.PORT : 3000;
 
-console.log("I'm in the express server");
+console.log("I'm in the express server with port " + port);
 
 // We only want to run the workflow when not in production
 if (!isProduction) {
