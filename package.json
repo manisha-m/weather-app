@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "production": "webpack -p",
     "dev": "webpack-dev-server --progress --colors",
-    "start": "node server"
+    "start": "node server",
+    "postinstall": "node deploy"
   },
   "author": "Manisha Malla",
   "license": "ISC",
