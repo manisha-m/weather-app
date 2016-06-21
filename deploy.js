@@ -1,4 +1,4 @@
-var isProduction = true;
+var isProduction = process.env.NODE_ENV === 'production';
 
 // Since postinstall will also run when you run npm install
 // locally we make sure it only runs in production
