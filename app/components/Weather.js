@@ -7,7 +7,7 @@ var alignJumbo = require('../styles').alignHomeJumbo;
 function Weather(props) {
             console.log('Rendering %o', props.weatherInfo);
     if(props.isLoading == true) {
-        return (<div> LOADING </div>);
+        return (<div> LOADING... </div>);
     }
     return (
         <div> 

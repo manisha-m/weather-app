@@ -2,11 +2,12 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "Weather App using React",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "production": "webpack -p",
-    "dev": "webpack-dev-server --progress --colors"
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "node server"
   },
   "author": "Manisha Malla",
   "license": "ISC",
