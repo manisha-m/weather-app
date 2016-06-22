@@ -1,6 +1,8 @@
 var express = require('express');
 var httpProxy = require('http-proxy');
 
+var path = require('path');
+
 var proxy = httpProxy.createProxyServer();
 
 var app = express();
@@ -28,6 +30,11 @@ if (!isProduction) {
     });
   });
     
+} else {
+    app.get('*', function response(req, res) {
+        console.log("Servicing request... from " + path.join(__dirname, 'dist/index.html'));  
+        res.sendFile(path.join(__dirname, 'dist/index.html'));
+  });
 }
 
 // It is important to catch any errors from the proxy or the

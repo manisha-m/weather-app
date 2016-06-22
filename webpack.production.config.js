@@ -1,8 +1,15 @@
 var Webpack = require('webpack');
 var path = require('path');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
-var buildPath = path.resolve(__dirname, 'build');
+var buildPath = path.resolve(__dirname, 'dist');
 var mainPath = path.resolve(__dirname, 'app', 'index.js');
+
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+    template: __dirname + '/app/index.html',
+    filename: 'index.html',
+    inject: 'body'
+});
 
 var config = {
 
@@ -10,13 +17,15 @@ var config = {
   devtool: 'source-map',
   entry: mainPath,
   output: {
-    path: buildPath,
-    filename: 'bundle.js'
+    path: __dirname + '/dist/',
+    filename: 'bundle.js',
+    publicPath: '/'
   },
+  plugins: [HtmlWebpackPluginConfig],
   module: {
     loaders: [{
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel-loader',
       exclude: [nodeModulesPath]
     },{
       test: /\.css$/,
