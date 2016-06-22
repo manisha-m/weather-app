@@ -1,8 +1,10 @@
+'use strict';
+
 var Webpack = require('webpack');
 var path = require('path');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
-var buildPath = path.resolve(__dirname, 'dist');
-var mainPath = path.resolve(__dirname, 'app', 'index.js');
+var distPath = path.join(__dirname, '/dist/');
+var mainPath = path.join(__dirname, 'app/index.js');
 
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -17,7 +19,7 @@ var config = {
   devtool: 'source-map',
   entry: mainPath,
   output: {
-    path: __dirname + '/dist/',
+    path: distPath,
     filename: 'bundle.js',
     publicPath: '/'
   },
