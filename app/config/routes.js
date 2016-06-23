@@ -9,6 +9,7 @@ var Main = require('../components/Main');
 var HomeContainer = require('../containers/HomeContainer');
 var WeatherContainer = require('../containers/WeatherContainer');
 var ForecastContainer = require('../containers/ForecastContainer');
+var DayForecastContainer = require('../containers/DayForecastContainer');
 
 
 var routes = (
@@ -17,6 +18,7 @@ var routes = (
             <IndexRoute component={HomeContainer} />
             <Route path='cityWeather/:city' component={WeatherContainer} />
             <Route path='forecast/:city' component={ForecastContainer} />
+            <Route path='dayForecast' component={DayForecastContainer} />
         </Route>
     </Router>
 );
