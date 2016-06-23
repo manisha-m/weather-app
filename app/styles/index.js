@@ -16,6 +16,10 @@ var styles = {
         background: 'transparent',
         height: '800px',
         width: '100%'
+    },
+    forecastFont: {
+        display: 'block',
+        fontSize: '2em'
     }
 };
 

@@ -19,10 +19,8 @@ var DayForecastContainer = React.createClass({
                 city: query.city,
                 dayForecast: JSON.parse(query.dayForecast)
         });
-        console.log("Query object %o", query);
     },
     render: function () {
-        console.log("In Render");
         return (
         <DayForecast 
             isLoading={this.state.isLoading}
