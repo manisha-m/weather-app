@@ -37,7 +37,10 @@ var HomeContainer = React.createClass({
    render: function () {
        return (
             <Home 
-                place={this.state.place} handleUpdatePlace={this.onUpdatePlace} handleSubmitPlace={this.onSubmitPlace} handleClick={this.onButtonClick} />
+                place={this.state.place} 
+                handleUpdatePlace={this.onUpdatePlace} 
+                handleSubmitPlace={this.onSubmitPlace} 
+                handleClick={this.onButtonClick} />
        );
    } 
 });

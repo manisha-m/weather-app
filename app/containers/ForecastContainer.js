@@ -27,11 +27,20 @@ var ForecastContainer = React.createClass({
            }.bind(this))
            
     },
+    onClickDetails: function (e) {
+        var dayIdArr = ['Day1', 'Day2', 'Day3', 'Day4', 'Day5'];
+        var dayIndex;
+        console.log('Handling Click Details of div id %o', e.target);
+        dayIndex = dayIdArr.indexOf(e.target.id);
+        console.log('Id of element ' + e.target.id + ' index ' + dayIndex);
+        console.log('Forecast data for day %d %o', dayIndex,  this.state.forecastInfo.list[dayIndex]);
+    },
     render: function () {
         return (
             <Forecast 
                 isLoading={this.state.isLoading}
-                forecastInfo={this.state.forecastInfo} />
+                forecastInfo={this.state.forecastInfo} 
+                handleClickDetails={this.onClickDetails}/>
         );
     }
 });
