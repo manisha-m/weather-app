@@ -4,6 +4,9 @@ var styles = {
       height: '800px',
       width: '100%'
     },
+    alignBtn: {
+       marginBottom: '8px' 
+    },
     transparentBg: {
         background: 'transparent'
     },
