@@ -30,6 +30,7 @@ if (!isProduction) {
   });
     
 } else {
+    app.use(express.static(__dirname + '/dist'));
     app.get('*', function response(req, res) {
         console.log("Servicing request... from " + path.join(__dirname, 'dist/index.html'));  
         res.sendFile(path.join(__dirname, 'dist/index.html'));
