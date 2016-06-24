@@ -1,14 +1,15 @@
 # weather-app
 Weather App using React, Node, Express and Webpack. Deployable on Heroku.
 
-Development builds:
+**Development builds:**
 - npm install
 - npm start
 - visit "http://localhost:3000/build/"
 
 Any code changes will be picked up by the running server and bundled for quick development.
 
-Deploying to Heroku:
+**Deploying to Heroku:**
+
 The app is set up for deployment to Heroku.
 
 Heroku will follow the postinstall command in the package.json and compile assets with webpack.production.config.js. 
