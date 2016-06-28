@@ -13,20 +13,22 @@ function DayForecast(props) {
 
     }
     var day = new Date(props.dayForecast.dt*1000);
+    var iconURL = "http://openweathermap.org/img/w/" + props.dayForecast.weather[0].icon + ".png";
     return (
         <div> 
             <MyNavBar handleSubmitPlace={props.handleSubmitPlace}/>
-            <div className='jumbotron col-sm-12' style={alignJumbo}>
-            <span className='col-sm-offset-3 text-center'>
+            <div className='jumbotron col-sm-12 text-center' style={alignJumbo}>
+
             <h1>{props.city}</h1>
             <h2>{day.toDateString()}</h2>
-            </span>
-            <span className='col-sm-offset-3 text-center'>
+
+  
+            <img src={iconURL} />          
             <h2>{props.dayForecast.weather[0].description}</h2>
             <h2>day temperature: {Math.round(props.dayForecast.temp.day - 273.15)} degrees</h2>
             <h2> humidity: {props.dayForecast.humidity}</h2>
             <h2> pressure: {props.dayForecast.pressure}</h2>
-            </span>
+          
             </div>
         </div>
         );
