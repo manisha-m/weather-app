@@ -1,5 +1,5 @@
 # weather-app
-Weather App using React, Node, Express and Webpack. Deployable on Heroku.
+Weather App using React, Node, Express and Webpack. Deployable on Heroku. Docker image available to be run in a docker container.
 
 ##Development builds:
 - npm install
