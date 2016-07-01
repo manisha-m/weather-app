@@ -22,6 +22,6 @@ For deploying to heroku, run the following after installing heroku toolbelt:
 
 ##Docker hub image:
 An image of the app is available at docker hub.
-Use "docker pull manisha/node-weather-app" to pull the image
-Use "docker run -p <HOST_PORT>:5000 -d manisha/node-weather-app" to run the pulled image in a container
-Access app using "http://localhost:<HOST_PORT>" from browser
+- Use "docker pull manisha/node-weather-app" to pull the image
+- Use "docker run -p <HOST_PORT>:5000 -d manisha/node-weather-app" to run the pulled image in a container
+- Access app using "http://localhost:<HOST_PORT>" from browser
