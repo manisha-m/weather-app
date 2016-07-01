@@ -1,5 +1,6 @@
 var isProduction = process.env.NODE_ENV === 'production';
 
+console.log("Running deployment script");
 // Since postinstall will also run when you run npm install
 // locally we make sure it only runs in production
 if (isProduction) {
